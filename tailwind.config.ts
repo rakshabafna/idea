@@ -1,0 +1,75 @@
+import type { Config } from "tailwindcss";
+
+const config: Config = {
+  darkMode: "class",
+  content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {
+        colors: {
+            "on-tertiary": "#ffffff",
+            "surface-tint": "#455f87",
+            "error-container": "#ffdad6",
+            "secondary-container": "#7ff5c6",
+            "on-surface-variant": "#43474e",
+            "secondary-fixed-dim": "#64dbae",
+            "inverse-surface": "#2d3133",
+            "surface-container-high": "#e6e8ea",
+            "on-error": "#ffffff",
+            "primary-fixed-dim": "#adc8f5",
+            "on-secondary-container": "#007152",
+            "surface-container-low": "#f2f4f6",
+            "primary-container": "#1e3a5f",
+            "tertiary-fixed": "#ffddb2",
+            "surface-container": "#eceef0",
+            "on-secondary-fixed": "#002115",
+            "secondary": "#006c4e",
+            "surface-bright": "#f7f9fb",
+            "surface-variant": "#e0e3e5",
+            "on-tertiary-fixed": "#291800",
+            "on-primary-container": "#8aa4cf",
+            "on-primary-fixed": "#001c3b",
+            "surface-container-lowest": "#ffffff",
+            "inverse-on-surface": "#eff1f3",
+            "tertiary-fixed-dim": "#edbf7f",
+            "primary": "#022448",
+            "on-error-container": "#93000a",
+            "on-tertiary-fixed-variant": "#60410c",
+            "tertiary": "#341f00",
+            "surface-container-highest": "#e0e3e5",
+            "on-tertiary-container": "#c69b5f",
+            "on-surface": "#191c1e",
+            "on-secondary": "#ffffff",
+            "surface": "#f7f9fb",
+            "inverse-primary": "#adc8f5",
+            "on-secondary-fixed-variant": "#00513a",
+            "on-primary": "#ffffff",
+            "secondary-fixed": "#82f8c9",
+            "error": "#ba1a1a",
+            "outline": "#74777f",
+            "outline-variant": "#c4c6cf",
+            "on-primary-fixed-variant": "#2d486d",
+            "on-background": "#191c1e",
+            "primary-fixed": "#d5e3ff",
+            "surface-dim": "#d8dadc",
+            "tertiary-container": "#503300",
+            "background": "#f7f9fb"
+        },
+        fontFamily: {
+            "headline": ["Manrope"],
+            "body": ["Inter"],
+            "label": ["Inter"],
+            "manrope": ["Manrope"],
+            "inter": ["Inter"]
+        },
+    },
+  },
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/container-queries')
+  ],
+};
+export default config;
