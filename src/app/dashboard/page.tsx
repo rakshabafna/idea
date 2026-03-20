@@ -46,6 +46,7 @@ export default function DashboardPage() {
   
   const [staffName, setStaffName] = useState('Staff');
   const [branchName, setBranchName] = useState('Main Branch');
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [messages, setMessages] = useState<any[]>([]);
   const [recordingState, setRecordingState] = useState<'idle' | 'recording' | 'processing'>('idle');
   const [messageIndex, setMessageIndex] = useState(0);
@@ -56,6 +57,7 @@ export default function DashboardPage() {
   const [showProfile, setShowProfile] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
   const [staffInput, setStaffInput] = useState('');
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [translationData, setTranslationData] = useState<any>(null);
 
   useEffect(() => {

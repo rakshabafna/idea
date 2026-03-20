@@ -143,7 +143,7 @@ export default function LandingPage() {
 </div>
 <div className="absolute top-12 left-[30%] hidden md:block w-[15%] h-[1px] bg-slate-200"></div>
 <h4 className="text-xl font-bold mb-4">Record</h4>
-<p className="text-slate-500">Enable the ambient desk-mic at the counter. Samvaad listens and identifies the customer's dialect instantly.</p>
+<p className="text-slate-500">Enable the ambient desk-mic at the counter. Samvaad listens and identifies the customer&apos;s dialect instantly.</p>
 </div>
 {/*  Step 2  */}
 <div className="flex flex-col items-center text-center group">
@@ -152,7 +152,7 @@ export default function LandingPage() {
 </div>
 <div className="absolute top-12 left-[63%] hidden md:block w-[15%] h-[1px] bg-slate-200"></div>
 <h4 className="text-xl font-bold mb-4">Translate</h4>
-<p className="text-slate-500">Real-time translation appears on the bank officer's terminal, suggesting specific banking terms in context.</p>
+<p className="text-slate-500">Real-time translation appears on the bank officer&apos;s terminal, suggesting specific banking terms in context.</p>
 </div>
 {/*  Step 3  */}
 <div className="flex flex-col items-center text-center group">

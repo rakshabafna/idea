@@ -2,7 +2,19 @@
 import EmotionIndicator from './EmotionIndicator';
 import FraudAlertBanner from './FraudAlertBanner';
 
-export default function ConversationFeed({ messages, fraudAlertVisible, onDismissFraud }: { messages: any[], fraudAlertVisible: boolean, onDismissFraud: () => void }) {
+type MessageType = {
+  role?: string;
+  text?: string;
+  translationData?: { translation?: string };
+  intent?: string;
+  time?: string;
+  emotion?: string;
+  intensity?: string;
+  staffTip?: string;
+  translation?: string;
+};
+
+export default function ConversationFeed({ messages, fraudAlertVisible, onDismissFraud }: { messages: MessageType[], fraudAlertVisible: boolean, onDismissFraud: () => void }) {
   if (messages.length === 0) {
     return (
       <div className="flex-1 flex flex-col items-center justify-center text-slate-400">
@@ -20,7 +32,7 @@ export default function ConversationFeed({ messages, fraudAlertVisible, onDismis
             <div key={index} className="space-y-4">
               <div className="flex flex-col items-start max-w-[85%]">
                 <div className="bg-surface-container-lowest p-4 rounded-xl rounded-tl-none shadow-sm border-l-4 border-secondary space-y-2">
-                  <p className="text-sm leading-relaxed text-on-surface font-medium">"{msg.text}"</p>
+                  <p className="text-sm leading-relaxed text-on-surface font-medium">&quot;{msg.text}&quot;</p>
                   {msg.translationData?.translation && (
                     <div className="pt-2 border-t border-slate-100">
                       <p className="text-xs text-slate-500 italic">En: {msg.translationData.translation}</p>
@@ -45,7 +57,7 @@ export default function ConversationFeed({ messages, fraudAlertVisible, onDismis
           return (
             <div key={index} className="flex flex-col items-end max-w-[85%] ml-auto mt-4">
               <div className="bg-primary text-on-primary p-4 rounded-xl rounded-tr-none shadow-md">
-                <p className="text-sm leading-relaxed font-medium">"{msg.text}"</p>
+                <p className="text-sm leading-relaxed font-medium">&quot;{msg.text}&quot;</p>
                 {msg.translation && (
                   <div className="pt-2 mt-2 border-t border-white/20">
                     <p className="text-xs text-white/80 italic">Hi: {msg.translation}</p>

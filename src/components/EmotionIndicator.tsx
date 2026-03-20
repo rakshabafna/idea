@@ -50,7 +50,7 @@ export default function EmotionIndicator({ emotion, intensity, staffTip }: { emo
       {getIntensityBars(intensity)}
       <div className="h-8 w-px bg-slate-200 mx-1"></div>
       <div className="flex-1">
-        <p className="text-xs font-bold text-slate-700 italic">"Staff Tip: {staffTip || 'Stay calm and assist.'}"</p>
+        <p className="text-xs font-bold text-slate-700 italic">&quot;Staff Tip: {staffTip || 'Stay calm and assist.'}&quot;</p>
       </div>
     </div>
   );

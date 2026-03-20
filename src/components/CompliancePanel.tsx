@@ -33,7 +33,7 @@ export default function CompliancePanel() {
               </div>
               <div>
                 <p className="text-sm font-bold text-primary">Session #SV-8842: Possible Coercion Flagged</p>
-                <p className="text-xs text-slate-500 mt-1">Customer utterance matched known "urgent transfer" social engineering archetype.</p>
+                <p className="text-xs text-slate-500 mt-1">Customer utterance matched known &quot;urgent transfer&quot; social engineering archetype.</p>
               </div>
             </div>
             <div className="flex items-center gap-4">

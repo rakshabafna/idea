@@ -14,7 +14,7 @@ export default function StaffReplyPanel({
   setStaffInput: (val: string) => void;
   onSend: () => void;
   onEndSession: () => void;
-  translationData: any;
+  translationData: Record<string, string> | null;
   onQuickPhrase: (phrase: { label: string, text: string }) => void;
 }) {
   return (
@@ -27,14 +27,14 @@ export default function StaffReplyPanel({
         </div>
         <div className="space-y-4">
           <div className="bg-white p-3 rounded-lg text-xs italic text-slate-500 border border-slate-100">
-            "{translationData?.original || 'Waiting for input...'}"
+            &quot;{translationData?.original || "Waiting for input..."}&quot;
           </div>
           <div className="bg-white p-3 rounded-lg text-xs font-medium text-slate-800 border border-slate-200">
-            Translates to: "{translationData?.translation || '...'}"
+            Translates to: &quot;{translationData?.translation || "..."}&quot;
           </div>
           <div className="bg-secondary-container/30 p-4 rounded-xl border border-secondary/20">
             <p className="text-[10px] font-black text-secondary uppercase mb-2 tracking-widest">Suggested Response</p>
-            <p className="text-sm font-medium text-primary mb-3">"{translationData?.suggested || 'Acknowledge the customer.'}"</p>
+            <p className="text-sm font-medium text-primary mb-3">&quot;{translationData?.suggested || "Acknowledge the customer."}&quot;</p>
             <button 
               onClick={() => setStaffInput(translationData?.suggested || '')}
               className="inline-flex items-center gap-1 text-[11px] font-bold text-secondary hover:underline underline-offset-4"

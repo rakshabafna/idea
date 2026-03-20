@@ -4,7 +4,7 @@ export default function FraudAlertBanner({ onDismiss }: { onDismiss: () => void 
       <span className="material-symbols-outlined text-error">report</span>
       <div className="flex-1">
         <p className="text-sm font-black tracking-tight uppercase">High Risk Transaction Detected</p>
-        <p className="text-xs font-medium">Possible social engineering detected: "mere bete ne kaha urgently transfer karo"</p>
+        <p className="text-xs font-medium">Possible social engineering detected: &quot;mere bete ne kaha urgently transfer karo&quot;</p>
       </div>
       <button onClick={onDismiss} className="bg-error text-white px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-tighter">Dismiss</button>
     </div>
