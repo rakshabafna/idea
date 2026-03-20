@@ -121,14 +121,16 @@ export default function DashboardPage() {
     <div className="bg-surface font-body text-on-surface min-h-screen">
       {/*  Top Navigation Anchor  */}
       <nav className="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm dark:shadow-none">
-        <div className="flex justify-between items-center px-8 h-16 w-full max-w-[1920px] mx-auto">
-          <div className="flex items-center gap-8">
-            <span className="text-2xl font-black text-[#1E3A5F] dark:text-white tracking-tighter font-headline">Samvaad</span>
-            <div className="hidden md:flex gap-6 items-center">
-              <button onClick={() => setActiveTab('dashboard')} className={`font-manrope font-bold tracking-tight text-sm ${activeTab === 'dashboard' ? 'text-[#1E3A5F] dark:text-white border-b-2 border-[#1E3A5F] dark:border-[#0f9e75] pb-1' : 'text-slate-500 dark:text-slate-400 font-medium hover:text-[#0f9e75] transition-colors duration-200'}`}>Dashboard</button>
-              <button onClick={() => setActiveTab('treasury')} className={`font-manrope font-bold tracking-tight text-sm ${activeTab === 'treasury' ? 'text-[#1E3A5F] dark:text-white border-b-2 border-[#1E3A5F] dark:border-[#0f9e75] pb-1' : 'text-slate-500 dark:text-slate-400 font-medium hover:text-[#0f9e75] transition-colors duration-200'}`}>Treasury</button>
-              <button onClick={() => setActiveTab('analytics')} className={`font-manrope font-bold tracking-tight text-sm ${activeTab === 'analytics' ? 'text-[#1E3A5F] dark:text-white border-b-2 border-[#1E3A5F] dark:border-[#0f9e75] pb-1' : 'text-slate-500 dark:text-slate-400 font-medium hover:text-[#0f9e75] transition-colors duration-200'}`}>Analytics</button>
-              <button onClick={() => setActiveTab('compliance')} className={`font-manrope font-bold tracking-tight text-sm ${activeTab === 'compliance' ? 'text-[#1E3A5F] dark:text-white border-b-2 border-[#1E3A5F] dark:border-[#0f9e75] pb-1' : 'text-slate-500 dark:text-slate-400 font-medium hover:text-[#0f9e75] transition-colors duration-200'}`}>Compliance</button>
+        <div className="flex flex-col md:flex-row justify-between items-center px-4 md:px-8 py-2 md:py-0 md:h-16 w-full max-w-[1920px] mx-auto gap-2 md:gap-0">
+          <div className="flex flex-col md:flex-row items-center gap-2 md:gap-8 w-full md:w-auto">
+            <div className="flex justify-between items-center w-full md:w-auto">
+              <span className="text-2xl font-black text-[#1E3A5F] dark:text-white tracking-tighter font-headline">Samvaad</span>
+            </div>
+            <div className="flex gap-4 md:gap-6 items-center overflow-x-auto w-full md:w-auto pb-1 md:pb-0 no-scrollbar">
+              <button onClick={() => setActiveTab('dashboard')} className={`whitespace-nowrap font-manrope font-bold tracking-tight text-sm ${activeTab === 'dashboard' ? 'text-[#1E3A5F] dark:text-white border-b-2 border-[#1E3A5F] dark:border-[#0f9e75] pb-1' : 'text-slate-500 dark:text-slate-400 font-medium hover:text-[#0f9e75] transition-colors duration-200'}`}>Dashboard</button>
+              <button onClick={() => setActiveTab('treasury')} className={`whitespace-nowrap font-manrope font-bold tracking-tight text-sm ${activeTab === 'treasury' ? 'text-[#1E3A5F] dark:text-white border-b-2 border-[#1E3A5F] dark:border-[#0f9e75] pb-1' : 'text-slate-500 dark:text-slate-400 font-medium hover:text-[#0f9e75] transition-colors duration-200'}`}>Treasury</button>
+              <button onClick={() => setActiveTab('analytics')} className={`whitespace-nowrap font-manrope font-bold tracking-tight text-sm ${activeTab === 'analytics' ? 'text-[#1E3A5F] dark:text-white border-b-2 border-[#1E3A5F] dark:border-[#0f9e75] pb-1' : 'text-slate-500 dark:text-slate-400 font-medium hover:text-[#0f9e75] transition-colors duration-200'}`}>Analytics</button>
+              <button onClick={() => setActiveTab('compliance')} className={`whitespace-nowrap font-manrope font-bold tracking-tight text-sm ${activeTab === 'compliance' ? 'text-[#1E3A5F] dark:text-white border-b-2 border-[#1E3A5F] dark:border-[#0f9e75] pb-1' : 'text-slate-500 dark:text-slate-400 font-medium hover:text-[#0f9e75] transition-colors duration-200'}`}>Compliance</button>
             </div>
           </div>
           <div className="flex items-center gap-4">
@@ -204,11 +206,11 @@ export default function DashboardPage() {
           </div>
         </div>
       </nav>
-      <main className="flex h-screen pt-16">
+      <main className="flex flex-col md:flex-row h-screen pt-28 md:pt-16 overflow-y-auto md:overflow-hidden">
         {activeTab === 'dashboard' ? (
           <>
             {/*  Left Panel (60%)  */}
-            <section className="w-3/5 bg-surface-container-low flex flex-col p-6 overflow-hidden">
+            <section className="w-full md:w-3/5 bg-surface-container-low flex flex-col p-4 md:p-6 overflow-hidden lg:overflow-hidden min-h-[60vh] md:min-h-0">
           {/*  Header & Language  */}
           <div className="flex justify-between items-center mb-6">
             <div className="flex items-center gap-3">

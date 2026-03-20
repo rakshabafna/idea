@@ -6,17 +6,19 @@ export default function LandingPage() {
       
 {/*  Top Navigation Bar  */}
 <nav className="fixed top-0 w-full z-50 glass-nav shadow-sm">
-<div className="flex justify-between items-center px-8 h-16 w-full max-w-[1920px] mx-auto">
-<div className="flex items-center gap-8">
+<div className="flex flex-col md:flex-row justify-between items-center px-4 md:px-8 py-2 md:py-0 md:h-16 w-full max-w-[1920px] mx-auto">
+<div className="flex flex-col md:flex-row items-center gap-2 md:gap-8 w-full md:w-auto">
+<div className="flex justify-between items-center w-full md:w-auto">
 <span className="text-2xl font-black text-[#1E3A5F] tracking-tighter">Samvaad</span>
-<div className="hidden md:flex gap-6">
-<Link className="text-[#1E3A5F] border-b-2 border-[#1E3A5F] pb-1 font-manrope font-bold tracking-tight text-sm" href="/dashboard">Dashboard</Link>
-<Link className="text-slate-500 font-medium font-manrope tracking-tight text-sm hover:text-[#0f9e75] transition-colors duration-200" href="/dashboard">Treasury</Link>
-<Link className="text-slate-500 font-medium font-manrope tracking-tight text-sm hover:text-[#0f9e75] transition-colors duration-200" href="/dashboard">Analytics</Link>
-<Link className="text-slate-500 font-medium font-manrope tracking-tight text-sm hover:text-[#0f9e75] transition-colors duration-200" href="/dashboard">Compliance</Link>
+</div>
+<div className="flex gap-4 md:gap-6 overflow-x-auto no-scrollbar w-full md:w-auto pb-1 md:pb-0">
+<Link className="whitespace-nowrap text-[#1E3A5F] border-b-2 border-[#1E3A5F] pb-1 font-manrope font-bold tracking-tight text-sm" href="/dashboard">Dashboard</Link>
+<Link className="whitespace-nowrap text-slate-500 font-medium font-manrope tracking-tight text-sm hover:text-[#0f9e75] transition-colors duration-200" href="/dashboard">Treasury</Link>
+<Link className="whitespace-nowrap text-slate-500 font-medium font-manrope tracking-tight text-sm hover:text-[#0f9e75] transition-colors duration-200" href="/dashboard">Analytics</Link>
+<Link className="whitespace-nowrap text-slate-500 font-medium font-manrope tracking-tight text-sm hover:text-[#0f9e75] transition-colors duration-200" href="/dashboard">Compliance</Link>
 </div>
 </div>
-<div className="flex items-center gap-4">
+<div className="flex items-center gap-4 hidden md:flex">
 <Link href="/dashboard" className="p-2 text-slate-500 hover:text-primary transition-colors">
 <span className="material-symbols-outlined" data-icon="notifications">notifications</span>
 </Link>
@@ -29,7 +31,7 @@ export default function LandingPage() {
 </div>
 </div>
 </nav>
-<main className="pt-16">
+<main className="pt-24 md:pt-16">
 {/*  Hero Section  */}
 <section className="relative overflow-hidden bg-surface py-24 md:py-32">
 <div className="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col items-center text-center">

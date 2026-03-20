@@ -18,7 +18,7 @@ export default function StaffReplyPanel({
   onQuickPhrase: (phrase: { label: string, text: string }) => void;
 }) {
   return (
-    <section className="w-2/5 bg-surface-container-lowest flex flex-col p-8 overflow-y-auto border-l border-surface-container">
+    <aside className="w-full md:w-2/5 bg-surface-container-lowest flex flex-col p-4 md:p-8 overflow-y-visible md:overflow-y-auto border-t md:border-t-0 md:border-l border-surface-container mt-4 md:mt-0">
       {/*  Translation & Suggested Response Card  */}
       <div className="mb-8 bg-surface-container-low rounded-xl p-6 border border-transparent">
         <div className="flex items-center gap-2 mb-4">
@@ -79,6 +79,6 @@ export default function StaffReplyPanel({
           End Session & Generate Summary
         </button>
       </div>
-    </section>
+    </aside>
   );
 }
