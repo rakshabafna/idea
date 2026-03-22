@@ -23,7 +23,7 @@ function CustomerRecallPanel({ onSuggestionClick }: { onSuggestionClick: (text: 
   const [expanded, setExpanded] = useState(true);
 
   return (
-    <div className="mb-0 bg-surface-container-low rounded-xl border border-transparent flex flex-col overflow-hidden shadow-sm">
+    <div className="mb-8 bg-surface-container-low rounded-xl border border-transparent flex flex-col shadow-sm">
       <button 
         onClick={() => setExpanded(!expanded)}
         className="flex items-center justify-between p-6 pb-4 cursor-pointer hover:bg-slate-50/50 transition-colors w-full text-left"
